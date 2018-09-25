@@ -36,12 +36,29 @@ public class Snake {
 	public void update() {
 		//1. use a switch statement to check on the currentDirection
 		//   of the snake and calculate its next x and y position.
-		
+		int x = head.getLocation().x;
+		int y = head.getLocation().y;
+		switch(currentDirection) {
+		case UP:
+			y--;
+			break; 
+		case LEFT:
+			x--;
+			break;
+		case RIGHT:
+			x++;
+			break;
+		case DOWN:
+			y++;
+			break;
+		}
 
 		//2. Iterate through the SnakeSegments in reverse order
 		//2a. Update each snake segment to the location of the segment 
 		//    in front of it.
-		
+		for () {
+			
+		}
 		
 		//3. set the location of the head to the new location calculated in step 1
 		
@@ -59,17 +76,16 @@ public class Snake {
 
 	public void reset(Location loc) {
 		//1. clear the snake
-		
+		snake.clear();
 		//2. set the location of the head
-		
+		head.setLocation(loc);
 		//3. add the head to the snake
-		
+		snake.add(head);
 	}
 
 	public boolean isOutOfBounds() {
 		//1. complete the method so it returns true if the head of the snake is outsize of the window
 		//   and false otherwise
-		
 		return false;
 	}
 	
@@ -83,7 +99,6 @@ public class Snake {
 	public boolean isLocationOnSnake(Location loc) {
 		//1. complete the method so it returns true if the passed in
 		//   location is located on the snake
-		
 		return false;
 	}
 

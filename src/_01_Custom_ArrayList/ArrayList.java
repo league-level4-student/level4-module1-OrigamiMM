@@ -42,11 +42,12 @@ public class ArrayList<T> {
 
 	public void remove(int loc) throws IndexOutOfBoundsException {
 		T[] newArray = (T[]) new Object[array.length - 1];
-		for (int i = 0; i < array.length; i++) {
-			if (i == loc) {
-				i++;
-			}else {
+		for (int i = 0; i < newArray.length; i++) {
+			if(i < loc) {
 				newArray[i] = array[i];
+			}
+			if(i >= loc){
+				newArray[i] = array[i+1];
 			}
 		}
 		array = newArray;
