@@ -42,7 +42,7 @@ public class _00_Horoscope {
 		case SAGITTARIUS:
 			System.out.println("Sagittarius is very fun and always surrounded by friends. Sagittarius-born love to laugh and enjoy the diversity of life and culture, so they will easily acquire many friends around the world.");
 			break;
-		case CAPRICON:
+		case CAPRICORN:
 			System.out.println("Some turnouts might not be that positive, but they will turn out to be extremely useful and positioning for your future. This is a good moment to act on certain impulses, going deep into your world of desires to see ...");
 			break;
 		}

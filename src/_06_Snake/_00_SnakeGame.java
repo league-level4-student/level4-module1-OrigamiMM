@@ -152,7 +152,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		Location location = new Location(r.nextInt(WIDTH),r.nextInt(HEIGHT));
 		//2. set the foodLocation variable equal to the Location object you just created.
 		//   use the snake's isLocationOnSnake method to make sure you don't put the food on the snake
-		if(!snake.isLocationOnSnake(foodLocation)) {
+		if(!snake.isLocationOnSnake(location)) {
 		foodLocation = location;
 		}
 	}
@@ -190,12 +190,12 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		snake.update();
 		//2. if the snake is colliding with its own body 
 		//   or if the snake is out of bounds, call gameOver
-		if (snake.isHeadCollidingWithBody()) {
+		if (snake.isHeadCollidingWithBody() || snake.isOutOfBounds()) {
 			gameOver();
 		}
 		//3. if the location of the head is equal to the location of the food,
 		// 	 feed the snake and set the food location
-		if(snake.getHeadLocation() == foodLocation) {
+		if(snake.getHeadLocation().equals(foodLocation)) {
 			snake.feed();
 			setFoodLocation();
 		}
