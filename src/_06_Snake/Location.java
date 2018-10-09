@@ -15,4 +15,8 @@ public class Location {
 		}
 		return false;
 	}
+	
+	public String toString() {
+		return "x: " + x +"\ty: " + y;
+	}
 }
